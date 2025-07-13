@@ -1,5 +1,6 @@
 from sqlalchemy import Column, Integer, Numeric, SmallInteger, String
 from sqlalchemy.ext.declarative import declarative_base
+from pgvector.sqlalchemy import Vector
 
 Base = declarative_base()
 
@@ -14,3 +15,4 @@ class Car(Base):
     num_seats = Column(SmallInteger,nullable=False)
     color = Column(String(20),nullable=False)
     daily_rate = Column(Numeric(10,2),nullable=False)
+    embedding = Column(Vector(1536)) # type: ignore

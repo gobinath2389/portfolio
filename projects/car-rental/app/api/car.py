@@ -1,16 +1,21 @@
+from pydantic import BaseModel
 from fastapi import APIRouter
-from app.services.car_service import add_car,get_all_cars
+from app.services.car_service import chat_with_bedrock
 from fastapi import FastAPI
 
 app = FastAPI()
 router = APIRouter()
 
-@router.get("/cars")
-def list_cars():
-    return get_all_cars()
 
-@router.post("/cars")
-def create_cars(car: dict):
-    return add_car(car)
+class ChatRequest(BaseModel):
+    user_id: str
+    question: str
+
+@router.post("/chat")
+def cars_chat(request: ChatRequest):
+    print('question is:', request.question)
+    print('user_id is:', request.user_id)
+    reply = chat_with_bedrock(request.user_id, request.question)
+    return {"response": reply}
 
 app.include_router(router)
