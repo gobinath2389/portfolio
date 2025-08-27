@@ -1,6 +1,3 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
-
-# this is the content of readme.md file can you please format its content create virtual env
 
 python3 -m venv ~/car-venv
 source ~/car-venv/bin/activate
