@@ -370,7 +370,7 @@ Suppose we have a function (like a cost function in machine learning):
 $$J(\theta) = (\theta - 2)^2$$
 
 - The **minimum** is the lowest point (bottom of the U-shape).  
-- We want to **find the value of \(\theta\)** that gives this minimum.
+- We want to **find the value of $\theta$ that gives this minimum.
 
 ---
 
@@ -414,7 +414,7 @@ Second derivative test:
 
 $$\frac{d^2}{d\theta^2} J(\theta) = 2 > 0$$
 
-So the minimum happens at \(\theta = 2\).
+So the minimum happens at $\theta =2$
 
 ---
 
@@ -430,14 +430,14 @@ That "slope zero" point is exactly why we use **derivatives**.
 ---
 
 ## 5. Why in Machine Learning?
-Our **cost function** \(J(\theta)\) is usually something like:
+Our **cost function** $J(\theta)$ is usually something like:
 
 $$
 J(\theta) = \frac{1}{2m}\sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})^2
 $$
 
-We want to **minimize** this cost → find the best parameters \theta
-So, we take derivatives of $$J(\theta)$$ w.r.t. each parameter \(\theta_j\), set them to 0, or use **gradient descent**.
+We want to **minimize** this cost → find the best parameters $\theta$
+So, we take derivatives of $\theta$ w.r.t. each parameter $\theta_j$, set them to 0, or use **gradient descent**.
 
 ---
 
